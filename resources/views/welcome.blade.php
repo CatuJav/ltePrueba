@@ -121,6 +121,11 @@
                             </a>
                         </div>
                     </div>
+                    @php
+                        use Carbon\Carbon;
+                        echo '<div class="text-center text-sm text-gray-500 sm:text-right">&copy; ' . Carbon::now()->format('Y') . ' Taylor Otwell</div>';
+                        echo Carbon::now();
+                    @endphp
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
